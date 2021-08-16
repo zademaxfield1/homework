@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de79481d-1b09-4d4d-9950-b100ff83fcf5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/certifi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/earmark.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ex_doc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/hackney.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/hound.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/idna.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jason.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_formatter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/metrics.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mimerl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/parse_trans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ssl_verify_fun.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/unicode_util_compat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/httpoison.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/homework-report_file_test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.exs" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mix.exs" beforeDir="false" afterPath="$PROJECT_DIR$/mix.exs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mix.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mix.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/homework_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/test/homework_test.exs" afterDir="false" />
@@ -35,11 +27,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1wlpMzgAsC6yrJbD4h09YGAyrsO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -67,5 +63,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

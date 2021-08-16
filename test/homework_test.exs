@@ -11,51 +11,51 @@ defmodule HomeworkTest do
 #  end
 
 
-#  test "add remove elements" do
-#    navigate_to "https://the-internet.herokuapp.com/"
-#    elementNavItem = find_element(:link_text, "Add/Remove Elements")
-#    click(elementNavItem)
-#
-#    #Check to see if the page loads
-#    assert page_source() =~ "Add/Remove"
-#
-#    #Select Add Element and see if Delete shows up
-#    elementAddElementButton = find_element(:css, "div.example > button")
-#    click(elementAddElementButton)
-#    elementDeleteButton = find_element(:class, "added-manually")
-#    assert elementDeleteButton
-#    assert visible_page_text() =~ "Delete"
-#
-#    #Press the delete button and make sure it goes away
-#    click(elementDeleteButton)
-#    refute visible_page_text() =~ "Delete"
-#  end
-#
-#  test "javascript alerts" do
-#    navigate_to "https://the-internet.herokuapp.com/"
-#    elementNavItem = find_element(:link_text, "JavaScript Alerts")
-#    click(elementNavItem)
-#
-#    #JS Alert
-#    elementJSAlert = find_element(:css, "button[onclick='jsAlert()']")
-#    click(elementJSAlert)
-#    assert dialog_text() =~ "I am a JS Alert"
-#    accept_dialog()
-#
-#    #JS Confirm
-#    elementJSConfirm = find_element(:css, "button[onclick='jsConfirm()']")
-#    click(elementJSConfirm)
-#    assert dialog_text() =~ "I am a JS Confirm"
-#    accept_dialog()
-#
-#    #JS Prompt
-#    elementJSPrompt = find_element(:css, "button[onclick='jsPrompt()']")
-#    click(elementJSPrompt)
-#    assert dialog_text() =~ "I am a JS prompt"
-#    input_into_prompt("Hello World")
-#    accept_dialog()
-#    visible_page_text() =~ "You entered: Hello World"
-#  end
+  test "add remove elements" do
+    navigate_to "https://the-internet.herokuapp.com/"
+    elementNavItem = find_element(:link_text, "Add/Remove Elements")
+    click(elementNavItem)
+
+    #Check to see if the page loads
+    assert page_source() =~ "Add/Remove"
+
+    #Select Add Element and see if Delete shows up
+    elementAddElementButton = find_element(:css, "div.example > button")
+    click(elementAddElementButton)
+    elementDeleteButton = find_element(:class, "added-manually")
+    assert elementDeleteButton
+    assert visible_page_text() =~ "Delete"
+
+    #Press the delete button and make sure it goes away
+    click(elementDeleteButton)
+    refute visible_page_text() =~ "Delete"
+  end
+
+  test "javascript alerts" do
+    navigate_to "https://the-internet.herokuapp.com/"
+    elementNavItem = find_element(:link_text, "JavaScript Alerts")
+    click(elementNavItem)
+
+    #JS Alert
+    elementJSAlert = find_element(:css, "button[onclick='jsAlert()']")
+    click(elementJSAlert)
+    assert dialog_text() =~ "I am a JS Alert"
+    accept_dialog()
+
+    #JS Confirm
+    elementJSConfirm = find_element(:css, "button[onclick='jsConfirm()']")
+    click(elementJSConfirm)
+    assert dialog_text() =~ "I am a JS Confirm"
+    accept_dialog()
+
+    #JS Prompt
+    elementJSPrompt = find_element(:css, "button[onclick='jsPrompt()']")
+    click(elementJSPrompt)
+    assert dialog_text() =~ "I am a JS prompt"
+    input_into_prompt("Hello World")
+    accept_dialog()
+    assert visible_page_text() =~ "You entered: Hello World"
+  end
 
   test "drag and drop" do
     navigate_to "https://the-internet.herokuapp.com/"
@@ -71,8 +71,20 @@ defmodule HomeworkTest do
     elementTextField = find_element(:id, "target")
     input_into_field(elementTextField, "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
     visible_page_text() =~ "You entered: &"
+#    assert visible_page_text() =~ "You entered: GOATS!!!!" #To see if the test fails
 
     clear_field(elementTextField)
+  end
+
+  test "simple api" do
+    HTTPoison.start
+#    resp = HTTPoison.get("https://reqres.in/api/users?page=2")
+    %HTTPoison.Response{status_code: 200, body: body} = HTTPoison.get!("https://reqres.in/api/users?page=2", [])
+    profile = Jason.decode!(body)
+
+    #Do some cool test with the data
+
+    IO.inspect(profile)
 
   end
 end

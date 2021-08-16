@@ -10,6 +10,13 @@ use Mix.Config
 
 config :hound, driver: "chrome_driver"
 
+config :junit_formatter,
+       report_file: "report_file_test.xml",
+       report_dir: "tmp",
+       print_report_file: true,
+       prepend_project_name?: true,
+       include_filename?: true
+
 # You can configure your application as:
 #
 #     config :homework, key: :value

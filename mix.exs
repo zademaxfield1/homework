@@ -22,7 +22,9 @@ defmodule Homework.MixProject do
   defp deps do
     [
       {:hound, "~> 1.0"},
-      {:junit_formatter, "~> 3.1", only: [:test]}
+      {:junit_formatter, "~> 3.1", only: [:test]},
+      {:jason, "~> 1.0"},
+      {:httpoison, "~> 1.6"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
